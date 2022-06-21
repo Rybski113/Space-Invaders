@@ -50,5 +50,11 @@ function moveInvaders() {
     const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width -1
     remove()
 
-    
+    for( let i = 0; i < alienInvaders.length; i++) {
+        alienInvaders[i] += 1
+    }
+
+    draw()
 }
+
+setInterval(moveInvaders, 500)
