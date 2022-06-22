@@ -22,7 +22,10 @@ const alienInvaders = [
 
 function draw() {
     for( let i = 0; i < alienInvaders.length; i++) {
-       squares[alienInvaders[i]].classList.add('invader')
+        if(!aliensRemoved.includes(i)) {
+            squares[alienInvaders[i]].classList.add('invader')
+        }
+       
     }
 }
 
@@ -111,7 +114,7 @@ function shoot(e) {
 
             const alienRemoved = alienInvaders.indexOf(currentLaserIndex)
             aliensRemoved.push(alienRemoved)
-            
+            console.log(aliensRemoved)
         }
 
     }
