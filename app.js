@@ -121,6 +121,7 @@ function shoot(e) {
             aliensRemoved.push(alienRemoved)
             results++
             resultsDisplay.innerHTML = results
+            
             console.log(aliensRemoved)
         }
 
@@ -128,6 +129,7 @@ function shoot(e) {
     switch(e.key) {
         case 'ArrowUp':
             laserId = setInterval(moveLaser, 300)
+            
     }
 }
 
